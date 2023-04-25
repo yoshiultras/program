@@ -85,7 +85,6 @@ public class L1List {
         after = next[index];
         link(before, after);
         freeIndex(index);
-        System.out.println(Arrays.toString(next));
         return val;
     }
 

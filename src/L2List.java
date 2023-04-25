@@ -55,83 +55,55 @@ public class L2List extends L1List {
         if(after == 1)
             throw new Exception();
         after = before;
-        before = next[before];
+        before = prev[before];
     }
     public Object before() throws Exception {
         return array[before];
     }
     public void insertFront(Object val) throws Exception {
-        int nextIndex = mallocIndex();
-        int prevIndex = reverseMallocIndex();
-
-        linkNext(before, nextIndex);
-        linkNext(nextIndex, after);
-        linkPrev(before, prevIndex);
-        linkPrev(prevIndex, after);
-        after = nextIndex;
-        array[nextIndex] = val;
-//        System.out.println("frontInsert");
-//        System.out.println(before + " " + after);
+        insert(val);
     }
     public void insertBack(Object val) throws Exception {
-        int nextIndex = mallocIndex();
         int prevIndex = reverseMallocIndex();
-
-        linkNext(before, nextIndex);
-        linkNext(nextIndex, after);
         linkPrev(before, prevIndex);
         linkPrev(prevIndex, after);
         before = prevIndex;
         array[prevIndex] = val;
-        System.out.println("backInsert");
-        System.out.println(before + " " + after);
-        System.out.println(Arrays.toString(next));
-        System.out.println(Arrays.toString(prev));
     }
-//    public Object frontErase() throws Exception {
-//        Object val = array[after];
-//        int index = after;
-//        after = next[index];
-//        linkNext(before, after);
-//
-//        int index1 = before;
-//        before = next[index1];
-//        linkPrev(before, after);
-//
-//        freeNextIndex(index);
-//        freePrevIndex(++index1);
-//        System.out.println("frontErase");
-//        System.out.println(before + " " + after);
-//        return val;
-//    }
-//    public Object backErase() throws Exception {
-//        System.out.println(Arrays.toString(next));
-//        System.out.println(Arrays.toString(prev));
-//        Object val = array[before];
-//
-//
-//        int index = after;
-//        after = next[index];
-//        linkNext(before, after);
-//        linkPrev(before, after);
-//
-//        freePrevIndex(index);
-//        freeNextIndex(index);
-//        System.out.println("backErase");
-//        System.out.println(before + " " + after);
-//        System.out.println(Arrays.toString(next));
-//        System.out.println(Arrays.toString(prev));
-//        return val;
-//    }
+    public Object frontErase() throws Exception {
+        Object val = array[after];
+        int index = after;
+        after = next[index];
+        linkNext(before, after);
+        linkPrev(before, after);
+        freeIndex(index);
+        freePrevIndex(index);
+        return val;
+    }
+    public Object backErase() throws Exception {
+        Object val = array[before];
+        int index = before;
+        before = prev[index];
+        linkPrev(after, before);
+        linkNext(after, before);
+        freePrevIndex(index);
+        freeNextIndex(index);
+        return val;
+    }
 
     public static void main(String[] args) throws Exception {
         L2List list = new L2List(5);
         for (int i = 0; i < 5; i++) {
-            list.insertBack(i);
+            list.insertFront(i);
         }
-        for (int i = 0; i < 5; i++) {
+
+        list.toBack();
+        list.backErase();
+
+        for (int i = 0; i < 4; i++) {
+            System.out.println(list.before());
+            if(i==3) break;
             list.backward();
-            list.before();
         }
     }
 }

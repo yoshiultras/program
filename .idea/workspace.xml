@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="second">
-      <change afterPath="$PROJECT_DIR$/src/Dequeue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/L1List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/L2List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lesson2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lesson3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/L2List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/L2List.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/L1List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/L1List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/L2List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/L2List.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +27,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Nikita/IdeaProjects/poly-program",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nikita/IdeaProjects/poly-program&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.L2List">
+    <configuration name="L2List" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="L2List" />
+      <module name="poly-program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="poly-program" />
@@ -54,6 +58,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.L2List" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -67,7 +72,9 @@
       <option name="presentableId" value="Default" />
       <updated>1682355957678</updated>
       <workItem from="1682355964038" duration="446000" />
-      <workItem from="1682356427365" duration="679000" />
+      <workItem from="1682356427365" duration="1768000" />
+      <workItem from="1682410799462" duration="1010000" />
+      <workItem from="1682414370667" duration="4684000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1682356596508</created>
@@ -76,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682356596508</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second">
+      <created>1682357189267</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682357189267</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
