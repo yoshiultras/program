@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="second">
-      <change afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lesson4.java" afterDir="false" />
+    <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="L2list">
+      <change afterPath="$PROJECT_DIR$/src/Lesson4_5_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Dequeue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Dequeue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/poly-program/L1List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/L1List.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/L2List.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/L2List.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Lesson2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Lesson2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Lesson3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Lesson3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Queue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Stack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lesson4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lesson4.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +32,32 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="1origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -34,21 +69,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/n.a.salivonov/IdeaProjects/program",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nikita/IdeaProjects/poly-program&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Human">
+}</component>
+  <component name="RunManager" selected="Application.Lesson4_5_1">
     <configuration name="Human" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Human" />
       <module name="poly-program" />
@@ -70,6 +105,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Lesson4_5_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson4_5_1" />
+      <module name="poly-program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="poly-program" />
@@ -79,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lesson4_5_1" />
         <item itemvalue="Application.Human" />
         <item itemvalue="Application.Lesson4" />
         <item itemvalue="Application.L2List" />
@@ -98,6 +141,7 @@
       <workItem from="1682356427365" duration="1768000" />
       <workItem from="1682410799462" duration="1010000" />
       <workItem from="1682414370667" duration="4684000" />
+      <workItem from="1682680053900" duration="2832000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1682356596508</created>
