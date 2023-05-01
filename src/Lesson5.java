@@ -22,7 +22,7 @@ public class Lesson5 {
 //            boolean result = input.matches(regex14);
 //            System.out.println(result);
 //        }
-        second();
+        third();
     }
     public static void first() {
         Scanner s = new Scanner(System.in);
@@ -45,8 +45,9 @@ public class Lesson5 {
     }
     public static void third() {
         Scanner s = new Scanner(System.in);
-        String allChars = "(q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|1|2|3|4|5|6|7|8|9|0)";
-        String regex = allChars + "@" + allChars + "\\." + allChars;
+        String allChars = "(q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m|1|2|3|4|5|6|7|8|9|0|_)+";
+        String comChars = "(q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m)+";
+        String regex = "(" + allChars + "((\\." + allChars + ")|)+)" + "@" + "(" + allChars + "\\.)+" + comChars;
         while (true) {
             String input = s.nextLine().toLowerCase();
             boolean result = input.matches(regex);
