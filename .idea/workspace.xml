@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="LESSON 5">
-      <change afterPath="$PROJECT_DIR$/out/production/poly-program/L3List.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/poly-program/Lesson4_5_2$PhoneDictionary.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/poly-program/Lesson4_5_2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/poly-program/Lesson5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/poly-program/Node.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/L3List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lesson4_5_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lesson5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
+    <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="Исправлен Human.compareTo и регулярка для email">
+      <change afterPath="$PROJECT_DIR$/src/convex/Convex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/ConvexFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/ConvexTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/Deq.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/Figure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/Polygon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/R2Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/Segment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/convex/Void.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Human.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,9 @@
     </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Task.java" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,30 +71,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/n.a.salivonov/IdeaProjects/program",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nikita/IdeaProjects/poly-program&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Lesson5">
-    <configuration name="Human" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Human" />
+}</component>
+  <component name="RunManager" selected="Application.ConvexTest">
+    <configuration name="ConvexTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="convex.ConvexTest" />
       <module name="poly-program" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="convex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="L2List" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="L2List" />
+    <configuration name="Human" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Human" />
       <module name="poly-program" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,13 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lesson4_5_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson4_5_2" />
-      <module name="poly-program" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Lesson5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lesson5" />
       <module name="poly-program" />
@@ -116,13 +120,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Task" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Task" />
+      <module name="poly-program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Lesson5" />
-        <item itemvalue="Application.L2List" />
-        <item itemvalue="Application.Lesson4_5_1" />
-        <item itemvalue="Application.Lesson4_5_2" />
+        <item itemvalue="Application.ConvexTest" />
+        <item itemvalue="Application.Task" />
         <item itemvalue="Application.Human" />
+        <item itemvalue="Application.Lesson5" />
+        <item itemvalue="Application.Lesson4_5_1" />
       </list>
     </recent_temporary>
   </component>
@@ -139,6 +150,14 @@
       <workItem from="1682410799462" duration="1010000" />
       <workItem from="1682414370667" duration="4684000" />
       <workItem from="1682680053900" duration="2832000" />
+      <workItem from="1682973508368" duration="269000" />
+      <workItem from="1683212600895" duration="333000" />
+      <workItem from="1683223784974" duration="17000" />
+      <workItem from="1683316614545" duration="634000" />
+      <workItem from="1683576915751" duration="15000" />
+      <workItem from="1683656863215" duration="926000" />
+      <workItem from="1683739954624" duration="31000" />
+      <workItem from="1683740024974" duration="5694000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1682356596508</created>
@@ -154,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682357189267</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Исправлен Human.compareTo и регулярка для email">
+      <created>1682973761041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682973761041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +204,7 @@
     </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="second" />
-    <MESSAGE value="LESSON 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="LESSON 5" />
+    <MESSAGE value="Исправлен Human.compareTo и регулярка для email" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлен Human.compareTo и регулярка для email" />
   </component>
 </project>
