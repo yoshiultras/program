@@ -2,8 +2,8 @@ package convex;
 
 import java.awt.*;
 
-//Класс "Нульугольник", реализующий интерфейс фигуры.
-public class Void implements Figure{
+//РљР»Р°СЃСЃ "РќСѓР»СЊСѓРіРѕР»СЊРЅРёРє", СЂРµР°Р»РёР·СѓСЋС‰РёР№ РёРЅС‚РµСЂС„РµР№СЃ С„РёРіСѓСЂС‹.
+class Void implements Figure{
     public double perimeter(){
         return 0.0;
     }
@@ -18,6 +18,11 @@ public class Void implements Figure{
 
     @Override
     public void draw(Graphics g) {
-        return;
+        ;
+    }
+
+    @Override
+    public double lineDist(Segment s) {
+        return 0.0;
     }
 }

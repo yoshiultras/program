@@ -3,13 +3,21 @@ package convex;
 import java.awt.*;
 import java.util.Scanner;
 
-//Класс, описывающий точку (Point) на плоскости (R2).
-public class R2Point{
+//РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ С‚РѕС‡РєСѓ (Point) РЅР° РїР»РѕСЃРєРѕСЃС‚Рё (R2).
+class R2Point{
     private double x, y;
 
     public R2Point(double x, double y){
         this.x = x;
         this.y = y;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
     }
 
     public R2Point() throws Exception{
@@ -27,9 +35,16 @@ public class R2Point{
     public static double area(R2Point a, R2Point b, R2Point c){
         return 0.5*((a.x - c.x)*(b.y - c.y) - (a.y - c.y)*(b.x - c.x));
     }
-
-    public static boolean equal(R2Point a, R2Point b){
-        return a.x == b.x && a.y == b.y;
+    @Override
+    public boolean equals(Object o) {
+        if(o == this) {
+            return true;
+        }
+        if(!(o instanceof R2Point)) {
+            return false;
+        }
+        R2Point r = (R2Point) o;
+        return x == r.x && y == r.y;
     }
 
     public static boolean isTriangle(R2Point a, R2Point b, R2Point c){
@@ -44,14 +59,15 @@ public class R2Point{
         double s = area(a, b, this);
         return s < 0.0 || (s == 0.0 && ! inside(a,b));
     }
-    public int getX() {
-        return (int) x;
+    public void draw(Graphics g){
+        g.setColor(Color.RED);
+        g.fillOval((int) getX()-2, (int) getY()-2,4,4);
     }
-    public int getY() {
-        return (int) y;
-    }
-    public void draw(Graphics g) {
-        g.setColor(new Color(0xFF5800));
-        g.fillOval((int)x - 4, (int)y - 4, 8, 8);
+
+    @Override
+    public String toString() {
+        return  "(" + x +
+                "," + y +
+                ")\n";
     }
 }

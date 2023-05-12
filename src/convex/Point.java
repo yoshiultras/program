@@ -2,8 +2,8 @@ package convex;
 
 import java.awt.*;
 
-//Класс "Одноугольник", реализующий интерфейс фигуры.
-public class Point implements Figure{
+//РљР»Р°СЃСЃ "РћРґРЅРѕСѓРіРѕР»СЊРЅРёРє", СЂРµР°Р»РёР·СѓСЋС‰РёР№ РёРЅС‚РµСЂС„РµР№СЃ С„РёРіСѓСЂС‹.
+class Point implements Figure{
     private R2Point p;
 
     public Point(R2Point p){
@@ -19,14 +19,19 @@ public class Point implements Figure{
     }
 
     public Figure add(R2Point q){
-        if(!R2Point.equal(p, q))
+        if(!p.equals(q))
             return new Segment(p, q);
         else
             return this;
     }
 
-    @Override
     public void draw(Graphics g) {
         p.draw(g);
     }
+
+    @Override
+    public double lineDist(Segment s) {
+        return Math.min(Math.sqrt(Math.pow(s.p.getX() - p.getX(), 2) + Math.pow(s.p.getY() - p.getY(), 2)),Math.sqrt(Math.pow(s.q.getX() - p.getX(), 2) + Math.pow(s.q.getY() - p.getY(), 2)));
+    }
+
 }

@@ -2,8 +2,10 @@ package convex;
 
 import java.awt.*;
 
-public class Convex{
+//Класс "Выпуклая оболочка".
+class Convex{
     private Figure fig;
+    private Segment line = new Segment(new R2Point(0, 0), new R2Point(0, 0));
 
     public Convex(){
         fig = new Void();
@@ -11,6 +13,9 @@ public class Convex{
 
     public void add(R2Point p){
         fig = fig.add(p);
+    }
+    public void addLine(Segment s){
+        line = s;
     }
 
     public double area(){
@@ -20,8 +25,11 @@ public class Convex{
     public double perimeter(){
         return fig.perimeter();
     }
-
-    public void draw(Graphics g) {
+    public double lineDist(Segment s) {
+        return fig.lineDist(s);
+    }
+    public void draw(Graphics g){
+        line.draw(g);
         fig.draw(g);
     }
 }

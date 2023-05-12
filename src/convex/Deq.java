@@ -1,13 +1,13 @@
 package convex;
 
-//Непрерывная реализация дека.
-public class Deq{
+//РќРµРїСЂРµСЂС‹РІРЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РґРµРєР°.
+class Deq<T>{
     private final static int DEFSIZE = 16;
-    private R2Point[] array;
+    private T[] array;
     private int size, head, tail;
 
     public Deq(int size){
-        array = new R2Point[size];
+        array = (T[]) new Object[size];
         this.size = head = 0;
         tail = array.length - 1;
     }
@@ -28,35 +28,36 @@ public class Deq{
         return size;
     }
 
-    public void pushFront(R2Point p){
+    public void pushFront(T p){
         array[head = backward(head)] = p;
         size += 1;
     }
 
-    public void pushBack(R2Point p){
+    public void pushBack(T p){
         array[tail = forward(tail)] = p;
         size += 1;
     }
 
-    public R2Point popFront(){
-        R2Point p = front();
+    public T popFront(){
+        T p = front();
         head = forward(head);
         size -= 1;
-        return p;
+        return (T) p;
     }
 
-    public R2Point popBack(){
-        R2Point p = back();
+    public T popBack(){
+        T p = back();
         tail = backward(tail);
         size -= 1;
         return p;
     }
 
-    public R2Point front(){
+    public T front(){
         return array[head];
     }
 
-    public R2Point back(){
+    public T back(){
         return array[tail];
     }
+
 }

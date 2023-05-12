@@ -2,10 +2,11 @@ package convex;
 
 import java.awt.*;
 
-//Интерфейс, задающий новый тип - фигуру.
-public interface Figure{
+//РРЅС‚РµСЂС„РµР№СЃ, Р·Р°РґР°СЋС‰РёР№ РЅРѕРІС‹Р№ С‚РёРї - С„РёРіСѓСЂСѓ.
+interface Figure{
     public double perimeter();
     public double area();
     public Figure add(R2Point p);
     public void draw(Graphics g);
+    public double lineDist(Segment s);
 }

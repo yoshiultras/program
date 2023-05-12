@@ -2,9 +2,9 @@ package convex;
 
 import java.awt.*;
 
-//Класс "Двуугольник", реализующий интерфейс фигуры.
-public class Segment implements Figure{
-    private R2Point p, q;
+//РљР»Р°СЃСЃ "Р”РІСѓСѓРіРѕР»СЊРЅРёРє", СЂРµР°Р»РёР·СѓСЋС‰РёР№ РёРЅС‚РµСЂС„РµР№СЃ С„РёРіСѓСЂС‹.
+class Segment implements Figure{
+    public R2Point p, q;
 
     public Segment(R2Point p, R2Point q){
         this.p = p;
@@ -32,10 +32,15 @@ public class Segment implements Figure{
         return this;
     }
 
-    @Override
     public void draw(Graphics g) {
-        g.drawLine(p.getX(), p.getY(), q.getX(), q.getY());
+        g.setColor(Color.BLACK);
+        g.drawLine((int) p.getX(),(int) p.getY(),(int) q.getX(),(int) q.getY());
         p.draw(g);
         q.draw(g);
+    }
+
+    @Override
+    public double lineDist(Segment s) {
+        return Math.min(new Point(p).lineDist(s), new Point(q).lineDist(s));
     }
 }

@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="Исправлен Human.compareTo и регулярка для email">
-      <change afterPath="$PROJECT_DIR$/src/convex/Convex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/ConvexFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/ConvexTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/Deq.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/Figure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/Polygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/R2Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/Segment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/convex/Void.java" afterDir="false" />
+    <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="Convex без внутренних точек">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Convex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Convex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/ConvexFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/ConvexFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/ConvexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/ConvexTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Deq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Deq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Figure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/R2Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/R2Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Segment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Segment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convex/Void.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/convex/Void.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,15 +108,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lesson4_5_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson4_5_1" />
+    <configuration name="Lesson5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson5" />
       <module name="poly-program" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lesson5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lesson5" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="poly-program" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ConvexTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Task" />
         <item itemvalue="Application.Human" />
         <item itemvalue="Application.Lesson5" />
-        <item itemvalue="Application.Lesson4_5_1" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +159,10 @@
       <workItem from="1683576915751" duration="15000" />
       <workItem from="1683656863215" duration="926000" />
       <workItem from="1683739954624" duration="31000" />
-      <workItem from="1683740024974" duration="5694000" />
+      <workItem from="1683740024974" duration="5844000" />
+      <workItem from="1683747551812" duration="975000" />
+      <workItem from="1683781948170" duration="1610000" />
+      <workItem from="1683916071477" duration="3277000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1682356596508</created>
@@ -180,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682973761041</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Convex">
+      <created>1683745862586</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683745862586</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Convex без внутренних точек">
+      <created>1683748534230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683748534230</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,6 +224,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="second" />
     <MESSAGE value="Исправлен Human.compareTo и регулярка для email" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен Human.compareTo и регулярка для email" />
+    <MESSAGE value="Convex" />
+    <MESSAGE value="Convex без внутренних точек" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convex без внутренних точек" />
   </component>
 </project>

@@ -1,28 +1,26 @@
 package convex;
 
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.ArrayDeque;
 
-//Класс "Многоугольник", реализующий интерфейс фигуры.
-public class Polygon extends Deq implements Figure{
+//РљР»Р°СЃСЃ "РњРЅРѕРіРѕСѓРіРѕР»СЊРЅРёРє", СЂРµР°Р»РёР·СѓСЋС‰РёР№ РёРЅС‚РµСЂС„РµР№СЃ С„РёРіСѓСЂС‹.
+class Polygon extends ArrayDeque implements Figure{
     private double s, p;
 
     public Polygon(R2Point a, R2Point b, R2Point c){
-        pushFront(b);
+        offerFirst(b);
 
         if (b.light(a, c)){
-            pushFront(a);
-            pushBack(c);
+            offerFirst(a);
+            offerLast(c);
         }
         else{
-            pushFront(c);
-            pushBack(a);
+            offerFirst(c);
+            offerLast(a);
         }
 
         p = R2Point.dist(a, b) + R2Point.dist(b, c)+ R2Point.dist(c, a);
         s = Math.abs(R2Point.area(a, b, c));
-
-
     }
 
     public double perimeter(){
@@ -39,50 +37,56 @@ public class Polygon extends Deq implements Figure{
     }
 
     public Figure add(R2Point t){
-
         int i;
-        //Ищем освещенные ребра, просматривая их одно за другим.
-        for(i = length(); i>0 && !t.light(back(), front()); i--)
-            pushBack(popFront());
+        //РС‰РµРј РѕСЃРІРµС‰РµРЅРЅС‹Рµ СЂРµР±СЂР°, РїСЂРѕСЃРјР°С‚СЂРёРІР°СЏ РёС… РѕРґРЅРѕ Р·Р° РґСЂСѓРіРёРј.
+        for(i = size(); i>0 && !t.light((R2Point) peekLast(), (R2Point) peekFirst()); i--)
+            offerLast(pollFirst());
 
-        //УТВЕРЖДЕНИЕ:
-        //либо ребро [back(), front()] освещено из t,
-        //либо освещенных ребер нет совсем.
+        //РЈРўР’Р•Р Р–Р”Р•РќРР•:
+        //Р»РёР±Рѕ СЂРµР±СЂРѕ [back(), front()] РѕСЃРІРµС‰РµРЅРѕ РёР· t,
+        //Р»РёР±Рѕ РѕСЃРІРµС‰РµРЅРЅС‹С… СЂРµР±РµСЂ РЅРµС‚ СЃРѕРІСЃРµРј.
         if (i>0){
             R2Point x;
-            grow(back(), front(), t);
+            grow((R2Point) peekLast(), (R2Point) peekFirst(), t);
 
-            //Удаляем все освещенные ребра из начала дека.
-            for(x = popFront(); t.light(x, front()); x = popFront())
-                grow(x, front(), t);
-            pushFront(x);
+            //РЈРґР°Р»СЏРµРј РІСЃРµ РѕСЃРІРµС‰РµРЅРЅС‹Рµ СЂРµР±СЂР° РёР· РЅР°С‡Р°Р»Р° РґРµРєР°.
+            for(x = (R2Point) pollFirst(); t.light(x, (R2Point) peekFirst()); x = (R2Point) pollFirst())
+                grow(x, (R2Point) peekFirst(), t);
+            offerFirst(x);
 
-            //Удаляем все освещенные ребра из конца дека.
-            for (x = popBack(); t.light(back(), x); x = popBack())
-                grow(back(), x, t);
-            pushBack(x);
+            //РЈРґР°Р»СЏРµРј РІСЃРµ РѕСЃРІРµС‰РµРЅРЅС‹Рµ СЂРµР±СЂР° РёР· РєРѕРЅС†Р° РґРµРєР°.
+            for (x = (R2Point) pollLast(); t.light((R2Point) peekLast(), x); x = (R2Point) pollLast())
+                grow((R2Point) peekLast(), x, t);
+            offerLast(x);
 
-            //Завершаем обработку добавляемой точки.
-            p += R2Point.dist(back(), t) + R2Point.dist(t, front());
-            pushFront(t);
+            //Р—Р°РІРµСЂС€Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ РґРѕР±Р°РІР»СЏРµРјРѕР№ С‚РѕС‡РєРё.
+            p += R2Point.dist((R2Point) peekLast(), t) + R2Point.dist(t, (R2Point) peekFirst());
+            offerFirst(t);
         }
 
         return this;
     }
 
-    @Override
     public void draw(Graphics g) {
-        int[] x = new int[length()];
-        int[] y = new int[length()];
-        for (int i = 0; i < length(); i++) {
-            R2Point p = popBack();
-            pushFront(p);
-            p.draw(g);
-            x[i] = p.getX();
-            y[i] = p.getY();
+        for(int i = 0; i < size(); i++) {
+            g.setColor(Color.BLACK);
+            R2Point point = (R2Point) peekLast();
+            R2Point point2 = (R2Point) peekFirst();
+            g.drawLine((int) point.getX(),(int) point.getY(),(int) point2.getX(),(int) point2.getY());
+            point.draw(g);
+            point2.draw(g);
+            offerLast(pollFirst());
         }
-        g.setColor(new Color(0x0000FF));
-        g.drawPolygon(x, y, length());
+    }
 
+    @Override
+    public double lineDist(Segment s) {
+        double res = Double.MAX_VALUE;
+        for(int i = 0; i < size(); i++) {
+            Segment s2 = new Segment((R2Point) peekLast(), (R2Point) peekFirst());
+            offerLast(pollFirst());
+            res = Math.min(res, s2.lineDist(s));
+        }
+        return res;
     }
 }
