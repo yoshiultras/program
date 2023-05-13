@@ -9,15 +9,15 @@ public class R3Vector {
         _z = z;
     }
 
-    public double get_x() {
+    public double getX() {
         return _x;
     }
 
-    public double get_y() {
+    public double getY() {
         return _y;
     }
 
-    public double get_z() {
+    public double getZ() {
         return _z;
     }
     public void scale(double k) {

@@ -13,7 +13,7 @@ public class ConvexFrame extends JFrame {
     public ConvexFrame(Convex convex){
         this.setSize(WIDTH, HEIGHT);
         this.setTitle("Convex");
-        this.setLocation(900, 200);
+        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true); // --> paint(g)
         this.setResizable(false);
@@ -31,11 +31,10 @@ public class ConvexFrame extends JFrame {
     }
     public void paintComponent(Graphics g) {
         super.paint(g);
-        g.translate(WIDTH/2, HEIGHT/2); //Перенос начала координат в центр окна.
+        g.translate(WIDTH / 2, HEIGHT / 2); //Перенос начала координат в центр окна.
         /*g.drawLine(-WIDTH/2, 0, WIDTH/2, 0);
         g.drawLine(0, HEIGHT/2, 0, -HEIGHT/2);*/
         convex.draw(g);
         super.repaint();
     }
-
 }
