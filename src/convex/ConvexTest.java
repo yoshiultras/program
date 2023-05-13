@@ -3,7 +3,7 @@ package convex;
 import java.io.FileWriter;
 
 //Тест для выпуклой оболочки.
-class ConvexTest{
+class ConvexTest {
     public static void main(String[] args) throws Exception{
         Convex convex = new Convex();
         ConvexFrame frame = new ConvexFrame(convex);
