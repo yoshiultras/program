@@ -38,7 +38,9 @@ public class Facet {
         else g.fill(p);
     }
     public boolean isVisible() {
-        boolean res = R3Vector.vect(R3Vector.toR3Vector(_vertex[1], _vertex[0]), _vertex[1]).getZ() <= 0;
-        return res;
+        return R3Vector.vect(
+                R3Vector.toR3Vector(_vertex[0], _vertex[1]),
+                R3Vector.toR3Vector(_vertex[1], _vertex[2])
+        ).getZ() > 0;
     }
 }
