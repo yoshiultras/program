@@ -6,6 +6,6 @@ public class CubeTest {
 
         Screen screen = new Screen(cube, false);
         cube.scale(100);
-        cube.rotate(45,231,43);
+        cube.rotate(100,15,30);
     }
 }

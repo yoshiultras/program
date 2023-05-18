@@ -27,11 +27,12 @@ public class Facet {
     }
     public void draw(Graphics2D g, boolean transp) {
         Path2D p = new Path2D.Double();
-        p.moveTo(_vertex[0].getX(), _vertex[0].getY());
-        p.lineTo(_vertex[1].getX(), _vertex[1].getY());
-        p.lineTo(_vertex[2].getX(), _vertex[2].getY());
-        p.lineTo(_vertex[3].getX(), _vertex[3].getY());
-        p.lineTo(_vertex[0].getX(), _vertex[0].getY());
+        double c = 300;
+        p.moveTo(_vertex[0].getX() * (1 + _vertex[0].getZ() / c), _vertex[0].getY() * (1 + _vertex[0].getZ() / c));
+        p.lineTo(_vertex[1].getX() * (1 + _vertex[1].getZ() / c), _vertex[1].getY() * (1 + _vertex[1].getZ() / c));
+        p.lineTo(_vertex[2].getX() * (1 + _vertex[2].getZ() / c), _vertex[2].getY() * (1 + _vertex[2].getZ() / c));
+        p.lineTo(_vertex[3].getX() * (1 + _vertex[3].getZ() / c), _vertex[3].getY() * (1 + _vertex[3].getZ() / c));
+        p.lineTo(_vertex[0].getX() * (1 + _vertex[0].getZ() / c), _vertex[0].getY() * (1 + _vertex[0].getZ() / c));
         p.closePath();
         g.setColor(_color);
         if (transp) g.draw(p);

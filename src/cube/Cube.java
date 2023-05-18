@@ -33,7 +33,8 @@ public class Cube {
     }
     public void draw(Graphics2D g, boolean transp) {
         for (Facet facet : facets) {
-            if(facet.isVisible()) facet.draw(g, transp);
+            if(facet.isVisible())
+                facet.draw(g, transp);
         }
     }
 }

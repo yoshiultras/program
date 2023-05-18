@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1d0727ed-dd10-410b-90b4-5af3570fd747" name="Changes" comment="Convex 6.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/poly-program/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poly-program/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cube/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cube/Cube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cube/CubeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cube/CubeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cube/Facet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cube/Facet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cube/R3Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cube/R3Vector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
