@@ -7,12 +7,12 @@ public class Cube {
 
     public Cube() {
         facets = new Facet[6];
-        facets[0] = new Facet(new R3Vector(0,0,0), new R3Vector(0,1,0), new R3Vector(1,1,0), new R3Vector(1,0,0), Color.red);//задняя
-        facets[1] = new Facet(new R3Vector(0,0,1), new R3Vector(1,0,1), new R3Vector(1,1,1), new R3Vector(0,1,1), Color.ORANGE);//передняя
-        facets[2] = new Facet(new R3Vector(0,1,0), new R3Vector(0,1,1), new R3Vector(1,1,1), new R3Vector(1,1,0), Color.blue);//верхняя
-        facets[3] = new Facet(new R3Vector(0,0,0), new R3Vector(1,0,0), new R3Vector(1,0,1), new R3Vector(0,0,1), Color.green);//нижняя
-        facets[4] = new Facet(new R3Vector(1,1,1), new R3Vector(1,0,1), new R3Vector(1,0,0), new R3Vector(1,1,0), Color.cyan);//правая
-        facets[5] = new Facet(new R3Vector(0,1,1), new R3Vector(0,1,0), new R3Vector(0,0,0), new R3Vector(0,0,1), Color.MAGENTA);//левая
+        facets[0] = new Facet(new R3Vector(0,0,0), new R3Vector(0,1,0), new R3Vector(1,1,0), new R3Vector(1,0,0), Color.red);//пїЅпїЅпїЅпїЅпїЅпїЅ
+        facets[1] = new Facet(new R3Vector(0,0,1), new R3Vector(1,0,1), new R3Vector(1,1,1), new R3Vector(0,1,1), Color.ORANGE);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        facets[2] = new Facet(new R3Vector(0,1,0), new R3Vector(0,1,1), new R3Vector(1,1,1), new R3Vector(1,1,0), Color.blue);//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+        facets[3] = new Facet(new R3Vector(0,0,0), new R3Vector(1,0,0), new R3Vector(1,0,1), new R3Vector(0,0,1), Color.green);//пїЅпїЅпїЅпїЅпїЅпїЅ
+        facets[4] = new Facet(new R3Vector(1,1,1), new R3Vector(1,0,1), new R3Vector(1,0,0), new R3Vector(1,1,0), Color.cyan);//пїЅпїЅпїЅпїЅпїЅпїЅ
+        facets[5] = new Facet(new R3Vector(0,1,1), new R3Vector(0,1,0), new R3Vector(0,0,0), new R3Vector(0,0,1), Color.MAGENTA);//пїЅпїЅпїЅпїЅпїЅ
         this.translate(-0.5, -0.5, -0.5);
     }
 
@@ -31,10 +31,13 @@ public class Cube {
             facet.rotate(ux, uy, uz);
         }
     }
-    public void draw(Graphics2D g, boolean transp) {
+    public void draw(Graphics2D g, boolean transp, boolean perspective, int c) {
         for (Facet facet : facets) {
-            if(facet.isVisible())
-                facet.draw(g, transp);
+            if (transp) facet.draw(g, transp, perspective,  c);
+            else if(perspective) {
+                if (facet.isVisiblePersp(c))
+                    facet.draw(g, transp, perspective, c);
+            } else if (facet.isVisible()) facet.draw(g, transp, perspective, c);
         }
     }
 }
