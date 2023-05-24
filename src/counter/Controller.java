@@ -1,6 +1,7 @@
 package counter;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -10,6 +11,7 @@ public class Controller extends JPanel implements Observer {
     public Controller(Counter counter, MyPanel panel){
         this.counter = counter;
         this.panel = panel;
+        this.setLayout(new GridLayout(2, 1));
         this.add(new IncrementButton(counter, panel));
         this.add(new DecrementButton(counter, panel));
     }

@@ -11,8 +11,8 @@ public class Screen extends JFrame {
     public static final int HEIGHT = 800;
     private Image img;
     private Graphics doubleBuff;
-    private boolean transp;
-    private boolean perspective;
+    public boolean transp;
+    public boolean perspective;
     private int c;
     public Screen(Cube cube, boolean transp, boolean perspective, int c) {
         this.setSize(WIDTH, HEIGHT);
