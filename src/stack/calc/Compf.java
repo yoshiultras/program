@@ -36,7 +36,7 @@ public class Compf extends Stack{
         switch(symType(c)){
             case SYM_LEFT:
                 size = 0;
-                push(c);
+                left(c);
                 break;
             case SYM_RIGHT:
                 unar = 0;
@@ -54,6 +54,9 @@ public class Compf extends Stack{
                 break;
         }
     }
+    protected void left(char c) {
+        push(c);
+    }
 
     private void processSuspendedSymbols(char c){
         while(precedes(top(), c))
@@ -61,14 +64,14 @@ public class Compf extends Stack{
     }
 
     private int priority(char c){
-        return c == '+' || c == '-' ? 1 : 2;
+        return c == '+' || c == '-' ? 1 : c == '*' ? 3 : 2;
     }
 
     private boolean precedes(char a, char b){
         if(symType(a) == SYM_LEFT) return false;
         if(symType(b) == SYM_RIGHT) return true;
 
-        return priority(a) >= priority(b);
+        return priority(a) >= priority(b) && (a!='*' || b!='*');
     }
 
     protected int symOther(char c){

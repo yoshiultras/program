@@ -4,6 +4,10 @@ import java.awt.*;
 
 //Класс "Нульугольник", реализующий интерфейс фигуры.
 class Void implements Figure{
+    private Segment s;
+    public Void(Segment s) {
+        this.s = s;
+    }
     public double perimeter(){
         return 0.0;
     }
@@ -13,7 +17,7 @@ class Void implements Figure{
     }
 
     public Figure add(R2Point p){
-        return new Point(p);
+        return new Point(p, s);
     }
 
     @Override

@@ -18,6 +18,12 @@ public class Calc extends Compf{
 
         return SYM_OTHER;
     }
+    @Override
+    protected void left(char c) {
+        push(c);
+        s.push(0);
+        size = 1;
+    }
 
     @Override
     protected void nextOper(char c) {
@@ -32,7 +38,11 @@ public class Calc extends Compf{
                 s.push(first - second);
                 break;
             case '*':
-                s.push(first * second);
+                if (top() == '*') {
+                    pop();
+                    s.push((int) Math.pow(first, second));
+                }
+                else s.push(first * second);
                 break;
             case'/':
                 s.push(first / second);

@@ -7,8 +7,8 @@ class Convex{
     private Figure fig;
     private Segment line = new Segment(new R2Point(0, 0), new R2Point(0, 0));
 
-    public Convex(){
-        fig = new Void();
+    public Convex(Segment s){
+        fig = new Void(s);
     }
 
     public void add(R2Point p){

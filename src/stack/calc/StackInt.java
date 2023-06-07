@@ -22,5 +22,8 @@ class StackInt{
     public final int top(){
         return array[head - 1];
     }
+    public final int size(){
+        return head;
+    }
 
 }

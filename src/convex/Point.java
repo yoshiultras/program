@@ -5,7 +5,12 @@ import java.awt.*;
 //Класс "Одноугольник", реализующий интерфейс фигуры.
 class Point implements Figure{
     private R2Point p;
+    private Segment s;
 
+    public Point(R2Point p, Segment s){
+        this.p = p;
+        this.s = s;
+    }
     public Point(R2Point p){
         this.p = p;
     }
@@ -20,7 +25,7 @@ class Point implements Figure{
 
     public Figure add(R2Point q){
         if(!p.equals(q))
-            return new Segment(p, q);
+            return new Segment(p, q, s);
         else
             return this;
     }

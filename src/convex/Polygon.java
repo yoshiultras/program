@@ -5,11 +5,12 @@ import java.util.ArrayDeque;
 
 //Класс "Многоугольник", реализующий интерфейс фигуры.
 class Polygon extends ArrayDeque implements Figure{
-    private double s, p;
+    private double s, p, d;
+    private Segment seg;
 
-    public Polygon(R2Point a, R2Point b, R2Point c){
+    public Polygon(R2Point a, R2Point b, R2Point c, Segment seg){
         offerFirst(b);
-
+        this.seg = seg;
         if (b.light(a, c)){
             offerFirst(a);
             offerLast(c);
@@ -18,7 +19,12 @@ class Polygon extends ArrayDeque implements Figure{
             offerFirst(c);
             offerLast(a);
         }
-
+        d = Double.MAX_VALUE;
+        for(int i = 0; i < size(); i++) {
+            Segment s2 = new Segment((R2Point) peekLast(), (R2Point) peekFirst());
+            offerLast(pollFirst());
+            d = Math.min(d, s2.lineDist(seg));
+        }
         p = R2Point.dist(a, b) + R2Point.dist(b, c)+ R2Point.dist(c, a);
         s = Math.abs(R2Point.area(a, b, c));
     }
@@ -34,6 +40,12 @@ class Polygon extends ArrayDeque implements Figure{
     private void grow(R2Point a, R2Point b, R2Point t){
         p -= R2Point.dist(a, b);
         s += Math.abs(R2Point.area(a, b, t));
+        Segment s1 = new Segment(a, b);
+        Segment s2 = new Segment(a, t);
+        Segment s3 = new Segment(t, b);
+        d = Math.min(d, s1.lineDist(seg));
+        d = Math.min(d, s2.lineDist(seg));
+        d = Math.min(d, s3.lineDist(seg));
     }
 
     public Figure add(R2Point t){
@@ -81,12 +93,6 @@ class Polygon extends ArrayDeque implements Figure{
 
     @Override
     public double lineDist(Segment s) {
-        double res = Double.MAX_VALUE;
-        for(int i = 0; i < size(); i++) {
-            Segment s2 = new Segment((R2Point) peekLast(), (R2Point) peekFirst());
-            offerLast(pollFirst());
-            res = Math.min(res, s2.lineDist(s));
-        }
-        return res;
+        return d;
     }
 }
