@@ -40,12 +40,7 @@ class Polygon extends ArrayDeque implements Figure{
     private void grow(R2Point a, R2Point b, R2Point t){
         p -= R2Point.dist(a, b);
         s += Math.abs(R2Point.area(a, b, t));
-        Segment s1 = new Segment(a, b);
-        Segment s2 = new Segment(a, t);
-        Segment s3 = new Segment(t, b);
-        d = Math.min(d, s1.lineDist(seg));
-        d = Math.min(d, s2.lineDist(seg));
-        d = Math.min(d, s3.lineDist(seg));
+        d = Math.min(d, new Point(t).lineDist(seg));
     }
 
     public Figure add(R2Point t){
