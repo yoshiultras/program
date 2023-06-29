@@ -9,6 +9,7 @@ public class Compf extends Stack{
             SYM_OTHER = 3;
     protected int size = 0;
     protected int unar = 0;
+    private boolean pow;
 
     /*
     public Compf(){
@@ -92,6 +93,7 @@ public class Compf extends Stack{
     }
 
     public void compile(char[] str){
+        pow = false;
         processSymbol('(');
 
         for(int i = 0; i < str.length; i++)
